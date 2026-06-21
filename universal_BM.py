@@ -5,8 +5,8 @@ from docx.shared import Pt
 from io import BytesIO
 
 # --- 1. KONFIGURASI HALAMAN ---
-st.set_page_config(page_title="Perancang Master Universal", layout="wide")
-st.title("🎓 PTES Penjana Rancangan Mengajar Universal (BM)")
+st.set_page_config(page_title="Perancang Pengajaran Universal", layout="wide")
+st.title("🎓 Penjana Rancangan Mengajar Universal (BM)")
 
 # --- INPUT KUNCI API (DI BAHAGIAN ATAS) ---
 user_api_key = st.text_input(
@@ -48,6 +48,7 @@ def generate_advanced_plan_bm(topic, syllabus, extra_context, api_key, model_nam
     Topik: {topic}. Kod Silibus: {syllabus}. Konteks Tambahan: {extra_context}.
     Janakan rancangan mengajar profesional dalam Bahasa Melayu sepenuhnya.
     JANGAN gunakan simbol dwi-asterisk (**) sama sekali dalam teks output.
+    JANGAN gunakan perkataan 'Murid', digantikan dengan perkataan 'Pelajar'.
     Gunakan senarai bernombor (1, 2, 3, 4) dan bukannya senarai peluru (bullet points) untuk setiap poin huraian criteria.
     
     Gunakan penanda (markers) dalam HURUF BESAR yang tepat ini untuk struktur dokumen:
